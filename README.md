@@ -41,3 +41,10 @@ Elle est adaptable pour prendre en charge d'autres éléments Markdown ou modifi
 
 Le projet repose sur **Flask** pour la création du serveur web et sur un petit moteur de conversion écrit en Python. L'interface HTML et le JavaScript fourni permettent un aperçu en temps réel du rendu. 
 Au-delà du simple script attendu, cette version propose une interface enrichie qui facilite l'expérimentation et la compréhension du rendu HTML en temps réel.
+
+## Détails techniques
+
+- **Routes Flask** : l'application définit deux routes principales. `/` sert la page d'interface tandis que `/convert` reçoit le Markdown en AJAX et renvoie l'HTML généré sous forme JSON.
+- **Conversion** : la fonction `simple_markdown_to_html` analyse chaque ligne de Markdown et construit l'HTML progressivement. Elle gère entre autres les titres, listes, citations, blocs de code, tableaux et liens.
+- **Mise à jour en direct** : dans `static/script.js`, un écouteur sur la zone de texte envoie le contenu au serveur à chaque modification puis insère l'HTML obtenu dans la zone d'aperçu.
+- **Interface statique** : le fichier `templates/index.html` présente deux panneaux côte à côte, stylisés par `static/style.css`, pour saisir le Markdown et consulter le résultat.
