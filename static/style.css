@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    font-family: 'Inter', Arial, sans-serif;
+}
+.container {
+    max-width: 1400px;
+    margin: 32px auto;
+    padding: 24px 8px;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60, 60, 120, 0.10);
+}
+h1 {
+    text-align: center;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+.editor-preview {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.editor, .preview {
+    flex: 1 1 500px;
+    min-width: 420px;
+    background: #f6f8fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(60, 60, 120, 0.07);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+textarea {
+    width: 100%;
+    height: 75vh;
+    min-height: 350px;
+    resize: vertical;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.1rem;
+    font-family: 'Fira Mono', 'Consolas', monospace;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+.preview {
+    background: #fafbfc;
+    overflow: auto;
+    min-height: 350px;
+}
+#preview {
+    width: 100%;
+    min-height: 350px;
+    font-size: 1.08rem;
+    color: #222;
+}
+.copy-btn {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+    padding: 0.4rem 1.2rem;
+    background: #4f8cff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.copy-btn:hover {
+    background: #2563eb;
+}
+@media (max-width: 900px) {
+    .editor-preview {
+        flex-direction: column;
+    }
+}
+.subtitle {
+    font-size: 0.7em;
+    font-weight: 400;
+}
+.label-md {
+    font-weight: 600;
+    color: #4f8cff;
+    margin-bottom: 0.5rem;
+} 

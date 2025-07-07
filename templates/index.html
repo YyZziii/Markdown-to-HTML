@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown vers HTML - Aperçu en direct</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Markdown ➔ HTML <span class="subtitle">(Aperçu en direct)</span></h1>
+        <div class="editor-preview">
+            <div class="editor">
+                <label for="markdown" class="label-md">Markdown</label>
+                <textarea id="markdown" placeholder="Écris ton markdown ici..."></textarea>
+            </div>
+            <div class="preview">
+                <label class="label-md">Aperçu HTML</label>
+                <div id="preview">Aperçu HTML ici...</div>
+                <button class="copy-btn" onclick="copyHTML()">Copier le HTML</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    function copyHTML() {
+        const html = document.getElementById('preview').innerHTML;
+        navigator.clipboard.writeText(html);
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = 'Copié !';
+        setTimeout(() => { btn.textContent = 'Copier le HTML'; }, 1200);
+    }
+    </script>
+    <script src="/static/script.js"></script>
+</body>
+</html> 
