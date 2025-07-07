@@ -33,7 +33,8 @@ def simple_markdown_to_html(md_text):
             else:
                 in_code_block = False
                 lang_class = f' class="language-{code_block_lang}"' if code_block_lang else ''
-                html.append(f'<pre><code{lang_class}>{'\n'.join(code_block_content)}</code></pre>')
+                joined_code = "\n".join(code_block_content)
+                html.append(f"<pre><code{lang_class}>{joined_code}</code></pre>")
                 code_block_lang = ''
                 continue
         if in_code_block:
