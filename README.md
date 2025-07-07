@@ -5,11 +5,13 @@ Cette application Flask permet de convertir du Markdown en HTML et d'en avoir un
 ## Installation
 
 1. (Recommandé) Créez un environnement virtuel `venv` et activez-le :
+   
    ```bash
    python3 -m venv venv
    source venv/bin/activate
    ```
 2. Installez les dépendances :
+   
    ```bash
    pip install -r requirements.txt
    ```
@@ -38,4 +40,4 @@ Elle est adaptable pour prendre en charge d'autres éléments Markdown ou modifi
 ## Technologies utilisées
 
 Le projet repose sur **Flask** pour la création du serveur web et sur un petit moteur de conversion écrit en Python. L'interface HTML et le JavaScript fourni permettent un aperçu en temps réel du rendu. 
-Ce projet illustre donc l'utilisation conjointe de Python et de technologies web légères pour transformer du Markdown en HTML.
+Au-delà du simple script attendu, cette version propose une interface enrichie qui facilite l'expérimentation et la compréhension du rendu HTML en temps réel.
